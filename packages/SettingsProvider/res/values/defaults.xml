@@ -211,7 +211,7 @@
     <integer name="def_send_action_app_error">0</integer>
 
     <!-- Default for Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 1==on -->
-    <integer name="def_heads_up_enabled">1</integer>
+    <integer name="def_heads_up_enabled">1</integer> 
 
     <!-- Default for Settings.Global.DEVICE_NAME $1=MANUFACTURER $2=MODEL-->
     <string name="def_device_name">%1$s %2$s</string>
@@ -265,4 +265,6 @@
     <!-- Default for Settings.System.SWAP_VOLUME_KEYS_ON_ROTATION -->
     <bool name="def_swap_volume_keys_on_rotation">false</bool>
 
+    <!-- Defaults for Settings.System.DEV_FORCE_SHOW_NAVBAR. -->
+    <integer name="def_force_disable_navkeys">0</integer>
 </resources>

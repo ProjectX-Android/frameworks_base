@@ -1272,6 +1272,8 @@ public final class Settings {
                 MOVED_TO_SECURE.add(s);
             }
             MOVED_TO_SECURE.add(Secure.DEV_FORCE_SHOW_NAVBAR);
+            MOVED_TO_SECURE.add(Secure.NAVIGATION_BAR_TINT);
+            MOVED_TO_SECURE.add(Secure.ENABLE_HW_KEYS);
             MOVED_TO_SECURE.add(Secure.KEYBOARD_BRIGHTNESS);
             MOVED_TO_SECURE.add(Secure.BUTTON_BRIGHTNESS);
             MOVED_TO_SECURE.add(Secure.BUTTON_BACKLIGHT_TIMEOUT);
@@ -2654,6 +2656,16 @@ public final class Settings {
         /**
          * Developer options - Navigation Bar show switch
          * @deprecated Use {@link android.provider.Settings.Secure#DEV_FORCE_SHOW_NAVBAR} instead
+         * Navigation bar button color
+         * @deprecated Use {@link android.provider.Settings.Secure#NAVIGATION_BAR_TINT} instead
+         * @hide
+         */
+        @Deprecated
+        public static final String NAVIGATION_BAR_TINT = Secure.NAVIGATION_BAR_TINT;
+
+        /**
+         * Enable HW keys
+         * @deprecated Use {@link android.provider.Settings.Secure#ENABLE_HW_KEYS} instead
          * @hide
          */
         @Deprecated
@@ -3340,6 +3352,98 @@ public final class Settings {
          * @hide
          */
         public static final String KEY_APP_SWITCH_ACTION = "key_app_switch_action";
+        public static final String DOZE_OVERWRITE_VALUE = "doze_overwrite_value";
+ 
+		/**
+         * Navigation Bar show switch
+         * @hide
+         */
+        public static final String NAVBAR_FORCE_ENABLE = "navbar_force_enable";
+
+        /**
+         *
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_BUTTONS = "navigation_bar_buttons";
+
+        /**
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_HEIGHT_LANDSCAPE = "navigation_bar_height_landscape";
+
+        /**
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
+
+        /**
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_WIDTH = "navigation_bar_width";
+
+        /**
+         * @hide
+         */
+        public static final String SOFTKEY_LONG_PRESS_CONFIGURATION = "softkey_long_press_configuration";
+
+        /**
+         * Alternate navigation bar layouts
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_ALTERNATE_LAYOUTS = "navigation_bar_alternate_layouts";
+
+        /**
+         * Alternate layout 2
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_BUTTONS_TWO = "navigation_bar_buttons_two";
+
+        /**
+         * Alternate layout 3
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_BUTTONS_THREE = "navigation_bar_buttons_three";
+
+        /**
+         * Alternate layout 4
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_BUTTONS_FOUR = "navigation_bar_buttons_four";
+
+        /**
+         * Alternate layout 5
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_BUTTONS_FIVE = "navigation_bar_buttons_five";
+
+        /**
+         * Allow navigation bar side keys
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_SIDEKEYS = "navigation_bar_sidekeys";
+
+        /** 
+         * Allow navigation bar IME arrow keys
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_ARROWS = "navigation_bar_arrows";
+
+        /**
+         * Button layout for IME arrows
+         * @hide
+         */
+        public static final String NAVIGATION_IME_LAYOUT = "navigation_ime_layout";
+
+        /**
+         * Toggle for navigation ring
+         * @hide
+         */
+        public static final String ENABLE_NAVIGATION_RING = "enable_navigation_ring";
+
+        /**
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_RESTORE = "navigation_bar_restore";
 
         /**
          * Action to perform when the app switch key is long-pressed. (Default is 0)
@@ -6119,15 +6223,6 @@ public final class Settings {
         };
 
         /**
-         * The global recents long press activity chosen by the user.
-         * This setting is stored as a flattened component name as
-         * per {@link ComponentName#flattenToString()}.
-         *
-         * @hide
-         */
-        public static final String RECENTS_LONG_PRESS_ACTIVITY = "recents_long_press_activity";
-
-        /**
          * Whether to enable "advanced mode" for the current user.
          * Boolean setting. 0 = no, 1 = yes.
          * @hide
@@ -6142,6 +6237,13 @@ public final class Settings {
 
         /**
          * Developer options - Navigation Bar show switch
+         * Navigation bar button color
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_TINT = "navigation_bar_tint";
+
+        /**
+         * Enable HW keys
          * @hide
          */
         public static final String DEV_FORCE_SHOW_NAVBAR = "dev_force_show_navbar";
