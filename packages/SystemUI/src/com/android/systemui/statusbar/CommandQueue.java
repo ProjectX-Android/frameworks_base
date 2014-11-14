@@ -84,6 +84,7 @@ public class CommandQueue extends IStatusBar.Stub {
         public void animateExpandNotificationsPanel();
         public void animateCollapsePanels(int flags);
         public void animateExpandSettingsPanel();
+        public void animateNotificationsOrSettingsPanel();
         public void setSystemUiVisibility(int vis, int mask);
         public void topAppWindowChanged(boolean visible);
         public void setImeWindowStatus(IBinder token, int vis, int backDisposition,
@@ -99,6 +100,7 @@ public class CommandQueue extends IStatusBar.Stub {
         public void buzzBeepBlinked();
         public void notificationLightOff();
         public void notificationLightPulse(int argb, int onMillis, int offMillis);
+        public void notifyLayoutChange(int direction);
         public void showScreenPinningRequest();
     }
 
@@ -148,6 +150,13 @@ public class CommandQueue extends IStatusBar.Stub {
         synchronized (mList) {
             mHandler.removeMessages(MSG_EXPAND_SETTINGS);
             mHandler.sendEmptyMessage(MSG_EXPAND_SETTINGS);
+        }
+    }
+
+    public void animateNotificationsOrSettingsPanel() {
+        synchronized (mList) {
+        mHandler.removeMessages(MSG_ANIMATE_PANEL_FROM_NAVBAR);
+        mHandler.sendEmptyMessage(MSG_ANIMATE_PANEL_FROM_NAVBAR);
         }
     }
 
@@ -300,6 +309,9 @@ public class CommandQueue extends IStatusBar.Stub {
                     break;
                 case MSG_EXPAND_SETTINGS:
                     mCallbacks.animateExpandSettingsPanel();
+                    break;
+                case MSG_ANIMATE_PANEL_FROM_NAVBAR:
+                    mCallbacks.animateNotificationsOrSettingsPanel();
                     break;
                 case MSG_SET_SYSTEMUI_VISIBILITY:
                     mCallbacks.setSystemUiVisibility(msg.arg1, msg.arg2);

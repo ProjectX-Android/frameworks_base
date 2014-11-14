@@ -745,6 +745,28 @@ public class ViewConfiguration {
      */
     public boolean hasPermanentMenuKey() {
         return sHasPermanentMenuKey;
+        boolean mHasNavigationBar = Settings.System.getInt(mContext.getContentResolver(),
+                    Settings.System.NAVBAR_FORCE_ENABLE, 0) == 1;
+        // Check if hw keys are on to set overflow menu button
+        boolean mHasHwKeysEnabled = Settings.Secure.getInt(mContext.getContentResolver(),
+                    Settings.Secure.ENABLE_HW_KEYS, 0) == 1;
+
+        IWindowManager wm = WindowManagerGlobal.getWindowManagerService();
+        // Report no menu key if device has soft buttons
+        try {
+            if (wm.hasNavigationBar() || mHasNavigationBar || !mHasHwKeysEnabled) {
+                return false;
+            }
+        } catch (RemoteException ex) {
+            // do nothing, continue trying to guess
+        }
+
+        // Report menu key presence based on hardware key rebinding
+        try {
+            return wm.hasPermanentMenuKey();
+        } catch (RemoteException ex) {
+            return true;
+        }
     }
 
     /**
