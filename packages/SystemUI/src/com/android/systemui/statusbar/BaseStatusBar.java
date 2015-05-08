@@ -2137,6 +2137,10 @@ public abstract class BaseStatusBar extends SystemUI implements
         boolean hasTicker = mHeadsUpTicker && !TextUtils.isEmpty(notification.tickerText);
         boolean isAllowed = notification.extras.getInt(Notification.EXTRA_AS_HEADS_UP,
                 Notification.HEADS_UP_ALLOWED) != Notification.HEADS_UP_NEVER;
+
+        boolean isOngoing = sbn.isOngoing();
+        boolean isClearable = sbn.isClearable(); // not used yet
+
         boolean accessibilityForcesLaunch = isFullscreen
                 && mAccessibilityManager.isTouchExplorationEnabled();
 
@@ -2146,7 +2150,11 @@ public abstract class BaseStatusBar extends SystemUI implements
                 && mPowerManager.isScreenOn()
                 && (!mStatusBarKeyguardViewManager.isShowing()
                         || mStatusBarKeyguardViewManager.isOccluded())
-                && !mStatusBarKeyguardViewManager.isInputRestricted();
+                && !mStatusBarKeyguardViewManager.isInputRestricted()
+                && !isExpanded
+                && !zenBlocksHeadsUp
+                && !isImeShowing();
+
         try {
             interrupt = interrupt && !mDreamManager.isDreaming();
         } catch (RemoteException e) {

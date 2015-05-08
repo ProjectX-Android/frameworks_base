@@ -655,8 +655,13 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     mContext.getContentResolver(), SETTING_HEADS_UP_TICKER, 0);
             mTickerEnabled = !mUseHeadsUp;
             Log.d(TAG, "heads up is " + (mUseHeadsUp ? "enabled" : "disabled"));
+            mHeadsUpUserEnabled = 0 != Settings.System.getIntForUser(
+                    mContext.getContentResolver(), Settings.System.HEADS_UP_USER_ENABLED,
+                    Settings.System.HEADS_UP_USER_ON,
+                    UserHandle.USER_CURRENT);
+            Log.d(TAG, "heads up is " + (mUseHeadsUp && mHeadsUpUserEnabled ? "enabled" : "disabled"));
             if (wasUsing != mUseHeadsUp) {
-                if (!mUseHeadsUp) {
+                if (!mUseHeadsUp || !mHeadsUpUserEnabled) {
                     Log.d(TAG, "dismissing any existing heads up notification on disable event");
                     setHeadsUpVisibility(false);
                     mHeadsUpNotificationView.release();
@@ -883,6 +888,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     mHeadsUpObserver);
             mContext.getContentResolver().registerContentObserver(
                     Settings.Global.getUriFor(SETTING_HEADS_UP_TICKER), true,
+                    mHeadsUpObserver);
+            mContext.getContentResolver().registerContentObserver(
+                    Settings.System.getUriFor(Settings.System.HEADS_UP_USER_ENABLED), true,
                     mHeadsUpObserver);
         }
 
@@ -1754,7 +1762,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     @Override
     public void addNotification(StatusBarNotification notification, RankingMap ranking) {
         if (DEBUG) Log.d(TAG, "addNotification key=" + notification.getKey());
-        if (mUseHeadsUp && shouldInterrupt(notification)) {
+
+        // Do some checks before inflating
+        if (mUseHeadsUp && mHeadsUpUserEnabled && !isExpandedVisible()
+                && shouldInterrupt(notification)) {
             if (DEBUG) Log.d(TAG, "launching notification in heads up mode");
             Entry interruptionCandidate = new Entry(notification, null);
             ViewGroup holder = mHeadsUpNotificationView.getHolder();
