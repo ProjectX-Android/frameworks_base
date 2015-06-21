@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_952d00ab",
+        "filename": "services/core/java/com/android/server/power/PowerManagerService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 3669,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-21T13:56:40Z",
+      "side": 0,
+      "message": "weird",
+      "range": {
+        "startLine": 3663,
+        "startChar": 0,
+        "endLine": 3669,
+        "endChar": 5
+      },
+      "revId": "2b173c720b50561f45f07a8528e4d349b9d050b4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
