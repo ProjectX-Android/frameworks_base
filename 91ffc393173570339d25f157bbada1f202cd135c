@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "facab960_028e0679",
+        "filename": "packages/SystemUI/res/layout/recents.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-23T22:01:19Z",
+      "side": 1,
+      "message": "move down",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 47
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_42ebae12",
+        "filename": "packages/SystemUI/res/layout/recents_membar.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-23T22:01:19Z",
+      "side": 1,
+      "message": "put it at the botton",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 40
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
