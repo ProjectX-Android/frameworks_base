@@ -25,6 +25,121 @@
     },
     {
       "key": {
+        "uuid": "facab960_75b94b78",
+        "filename": "packages/SystemUI/res/layout/recents.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-24T16:12:48Z",
+      "side": 1,
+      "message": "idk if order is important",
+      "range": {
+        "startLine": 59,
+        "startChar": 3,
+        "endLine": 59,
+        "endChar": 55
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_15655f1d",
+        "filename": "packages/SystemUI/res/layout/recents_membar.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-24T16:12:48Z",
+      "side": 1,
+      "message": "bottom",
+      "range": {
+        "startLine": 25,
+        "startChar": 28,
+        "endLine": 25,
+        "endChar": 31
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_356a63ee",
+        "filename": "packages/SystemUI/res/layout/recents_membar.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-24T16:12:48Z",
+      "side": 1,
+      "message": "bottom",
+      "range": {
+        "startLine": 32,
+        "startChar": 32,
+        "endLine": 32,
+        "endChar": 35
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_556b67f0",
+        "filename": "packages/SystemUI/res/layout/recents_membar.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-24T16:12:48Z",
+      "side": 1,
+      "message": "20",
+      "range": {
+        "startLine": 33,
+        "startChar": 34,
+        "endLine": 33,
+        "endChar": 36
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_75706bdc",
+        "filename": "packages/SystemUI/res/layout/recents_membar.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-24T16:12:48Z",
+      "side": 1,
+      "message": "bottom",
+      "range": {
+        "startLine": 41,
+        "startChar": 32,
+        "endLine": 41,
+        "endChar": 35
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "facab960_42ebae12",
         "filename": "packages/SystemUI/res/layout/recents_membar.xml",
         "patchSetId": 3
@@ -41,6 +156,76 @@
         "startChar": 0,
         "endLine": 44,
         "endChar": 40
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_f5a47b4c",
+        "filename": "packages/SystemUI/res/layout/recents_membar.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-24T16:12:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "facab960_42ebae12",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 40
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_95788fc5",
+        "filename": "packages/SystemUI/res/values/dimens.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-24T16:12:48Z",
+      "side": 1,
+      "message": "revert",
+      "range": {
+        "startLine": 258,
+        "startChar": 44,
+        "endLine": 258,
+        "endChar": 47
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "facab960_f57b9bbb",
+        "filename": "packages/SystemUI/src/com/android/systemui/recents/RecentsActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 645,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-24T16:12:48Z",
+      "side": 1,
+      "message": "add animation to more places?",
+      "range": {
+        "startLine": 644,
+        "startChar": 2,
+        "endLine": 645,
+        "endChar": 60
       },
       "revId": "91ffc393173570339d25f157bbada1f202cd135c",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
