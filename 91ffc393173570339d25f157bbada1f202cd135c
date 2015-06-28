@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9ad9bd40_6e7cbf73",
+        "filename": "packages/SystemUI/res/layout/floating_action_button.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-28T14:58:28Z",
+      "side": 1,
+      "message": "change",
+      "range": {
+        "startLine": 34,
+        "startChar": 35,
+        "endLine": 34,
+        "endChar": 43
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "facab960_028e0679",
         "filename": "packages/SystemUI/res/layout/recents.xml",
         "patchSetId": 3
@@ -249,6 +272,29 @@
         "startChar": 2,
         "endLine": 645,
         "endChar": 60
+      },
+      "revId": "91ffc393173570339d25f157bbada1f202cd135c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ad9bd40_8e81034d",
+        "filename": "packages/SystemUI/src/com/android/systemui/recents/views/RecentsView.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 473,
+      "author": {
+        "id": 1003174
+      },
+      "writtenOn": "2015-06-28T14:58:28Z",
+      "side": 1,
+      "message": "show used ram",
+      "range": {
+        "startLine": 473,
+        "startChar": 11,
+        "endLine": 473,
+        "endChar": 42
       },
       "revId": "91ffc393173570339d25f157bbada1f202cd135c",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
