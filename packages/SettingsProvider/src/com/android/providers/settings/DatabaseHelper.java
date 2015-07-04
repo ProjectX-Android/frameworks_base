@@ -30,7 +30,6 @@ import android.content.res.ThemeConfig;
 import android.content.res.XmlResourceParser;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
 import android.media.AudioManager;
@@ -2791,9 +2790,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     R.integer.def_enable_accessiblity);
             loadStringSetting(stmt, Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES,
                     R.string.def_enable_accessiblity_services);
-
-            loadBooleanSetting(stmt, Settings.Secure.STATS_COLLECTION,
-                    R.bool.def_cm_stats_collection);
 
             loadBooleanSetting(stmt, Settings.Secure.ADVANCED_MODE,
                     com.android.internal.R.bool.config_advancedSettingsMode);

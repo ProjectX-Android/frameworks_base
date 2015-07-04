@@ -1263,7 +1263,6 @@ public final class Settings {
             MOVED_TO_SECURE.add(Secure.INSTALL_NON_MARKET_APPS);
 
             /* CM12 CHANGES */
-            MOVED_TO_SECURE.add(Secure.STATS_COLLECTION);
             MOVED_TO_SECURE.add(Secure.VOLUME_LINK_NOTIFICATION);
             MOVED_TO_SECURE.add(Secure.QS_TILES);
             MOVED_TO_SECURE.add(Secure.QS_USE_MAIN_TILES);
@@ -5986,12 +5985,6 @@ public final class Settings {
          * @hide
          */
         public static final String DEVELOPMENT_SHORTCUT = "development_shortcut";
-
-        /**
-         * Global stats collection
-         * @hide
-         */
-        public static final String STATS_COLLECTION = "stats_collection";
 
         /**
          * Boolean value whether to link ringtone and notification volume
